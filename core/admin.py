@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.models import Idol, Live, LiveAppearance
+from core.models import Idol, Live, LiveAppearance, Setlist, Sound, Place
 
 
 class IdolAdmin(admin.ModelAdmin):
@@ -14,8 +14,13 @@ class SoundAdmin(admin.ModelAdmin):
     list_display = ("id", "title", "remark")
 
 
+admin.site.register(Sound, SoundAdmin)
+
 class PlaceAdmin(admin.ModelAdmin):
     list_display = ("id", "name")
+
+
+admin.site.register(Place, PlaceAdmin)
 
 
 class LiveAdmin(admin.ModelAdmin):
@@ -34,3 +39,6 @@ admin.site.register(LiveAppearance, LiveAppearanceAdmin)
 
 class SetlistAdmin(admin.ModelAdmin):
     list_display = ("id", "live_apparance", "sound", "is_mc", "order")
+
+
+admin.site.register(Setlist, SetlistAdmin)

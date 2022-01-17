@@ -128,7 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-idol_setlist/settings_production.py
-idol_setlist/settings_local.py
-
 .idea/*
+
+sqlite3.db
